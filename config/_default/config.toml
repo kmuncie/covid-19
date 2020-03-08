@@ -1,10 +1,10 @@
-baseURL = "http://example.org"
-title = "Hugo Zzo Theme"
+baseURL = "https://coronavirus.muncie.dev"
+title = "COVID-19 Information"
 theme = "zzo"
 
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
-hasCJKLanguage = true
+defaultContentLanguageInSubdir = false
+hasCJKLanguage = false
 
 summaryLength = 70
 buildFuture = true
@@ -15,7 +15,7 @@ enableEmoji = true
 paginate = 13
 rssLimit = 100
 
-enableGitInfo = false
+enableGitInfo = true
 googleAnalytics = ""
 
 [markup]

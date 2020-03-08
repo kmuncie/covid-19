@@ -1,11 +1,12 @@
-logoText = "Zzo"
+logoText = "COVID-19 Information"
+logo = false
 logoType = "short" # long, short
-description = "The Zzo theme for Hugo example site."
+description = "Information about COVID-19 in Oregon state"
 custom_css = []
 custom_js = []
 useFaviconGenerator = true # https://www.favicon-generator.org/
 meta_image = ""
-themecolor = ""
+themecolor = "light"
 
 themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"]
 notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation", "resume"]
@@ -13,7 +14,7 @@ notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "publication", "
 notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation", "resume"]
 notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
 
-viewportSize = "normal" # widest, wider, wide, normal, narrow
+viewportSize = "wide" # widest, wider, wide, normal, narrow
 enableUiAnimation = true
 hideSingleContentsWhenJSDisabled = false
 
@@ -29,7 +30,7 @@ enablePhotoSwipe = true
 enableSearch = true
 enableSearchHighlight = true
 enableGoToTop = true
-enableWhoami = true
+enableWhoami = false
 summaryShape = "classic" # card, classic, compact
 searchResultPosition = "main" # side, main
 archiveGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
@@ -50,7 +51,7 @@ organization = "Hugo"
 link = "https://zzossig.io/ko"
 
 # sidebar
-enableBio = true
+enableBio = false
 enableBioImage = true
 enableSidebar = true
 enableSidebarTags = true
@@ -86,10 +87,10 @@ busuanziPagePV = true
 # rss
 updatePeriod = "" # Possible values: 'hourly', 'daily', 'weekly', 'monthly', or 'yearly'.
 updateFrequency = ""
-fullContents = false
+fullContents = true
 
 # comment
-enableComment = true
+enableComment = false
 disqus_shortname = ""
 commento = false
 
@@ -123,7 +124,7 @@ commento = false
   appKey = '你的appKey'
   notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
   verify = false # Verification code
-  avatar = 'mm' 
+  avatar = 'mm'
   placeholder = '说点什么吧...'
   visitor = false
 
@@ -141,11 +142,11 @@ commento = false
   dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
 [socialOptions]
-  email = "mailto:your@email.com"
+  email = ""
   phone = ""
-  facebook = "http://example.org/"
-  twitter = "http://example.org/"
-  github = "https://github.com/zzossig/hugo-theme-zzo"
+  facebook = ""
+  twitter = ""
+  github = ""
   stack-overflow = ""
   instagram = ""
   google-plus = ""
@@ -174,7 +175,7 @@ commento = false
 
 [donationOptions]
   enable = false
-  alipay = "" 
+  alipay = ""
   wechat = ""
   paypal = ""
   patreon = ""
