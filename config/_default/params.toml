@@ -6,7 +6,7 @@ custom_css = []
 custom_js = []
 useFaviconGenerator = true # https://www.favicon-generator.org/
 meta_image = ""
-themecolor = "light"
+themecolor = "#2259b7"
 
 themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"]
 notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation", "resume"]
@@ -15,14 +15,14 @@ notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presen
 notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
 
 viewportSize = "wide" # widest, wider, wide, normal, narrow
-enableUiAnimation = true
+enableUiAnimation = false
 hideSingleContentsWhenJSDisabled = false
 
 # header
 homeHeaderType = "text" # text, img, slide
 
 # menu
-showMobileMenuTerms = ["tags", "categories", "series"]
+showMobileMenuTerms = ["tags", "categories"]
 
 # body
 enableBreadcrumb = true
@@ -33,7 +33,7 @@ enableGoToTop = true
 enableWhoami = false
 summaryShape = "classic" # card, classic, compact
 searchResultPosition = "main" # side, main
-archiveGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
+archiveGroupByDate = "2006-01" # "2006-01": group by month, "2006": group by year
 archivePaginate = 13
 paginateWindow = 1
 talksPaginate = 5
@@ -41,21 +41,21 @@ talksGroupByDate = "2006"
 pubPaginate = 20
 
 # whoami
-myname = "zzossig"
-email = "zzossig@gmail.com"
-whoami = "Web Developer"
+myname = ""
+email = ""
+whoami = ""
 bioImageUrl = ""
 useGravatar = false
-location = "Seoul, Korea"
-organization = "Hugo"
-link = "https://zzossig.io/ko"
+location = ""
+organization = ""
+link = ""
 
 # sidebar
 enableBio = false
 enableBioImage = true
 enableSidebar = true
 enableSidebarTags = true
-enableSidebarSeries = true
+enableSidebarSeries = false
 enableSidebarCategories = true
 enableHomeSidebarTitles = true
 enableListSidebarTitles = true
@@ -72,7 +72,7 @@ enableSidebarPostsByOrder = false
 # footer
 showPoweredBy = true
 showFeedLinks = true
-showSocialLinks = true
+showSocialLinks = false
 enableLangChange = true
 enableThemeChange = true
 
@@ -85,7 +85,7 @@ busuanziSitePV = true
 busuanziPagePV = true
 
 # rss
-updatePeriod = "" # Possible values: 'hourly', 'daily', 'weekly', 'monthly', or 'yearly'.
+updatePeriod = "hourly" # Possible values: 'hourly', 'daily', 'weekly', 'monthly', or 'yearly'.
 updateFrequency = ""
 fullContents = true
 
@@ -181,11 +181,6 @@ commento = false
   patreon = ""
 
 # possible share name: ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line"]
-[[share]]
-  name = "facebook"
-  username = ""
-[[share]]
-  name = "twitter"
 
 [[footerLinks]]
   name = ""
