@@ -3,7 +3,7 @@ logo = false
 logoType = "short" # long, short
 description = "Information about COVID-19 in Oregon state"
 custom_css = []
-custom_js = []
+custom_js = ["js/custom.js"]
 useFaviconGenerator = true # https://www.favicon-generator.org/
 meta_image = ""
 themecolor = "#2259b7"
@@ -19,7 +19,7 @@ enableUiAnimation = false
 hideSingleContentsWhenJSDisabled = false
 
 # header
-homeHeaderType = "text" # text, img, slide
+homeHeaderType = "" # text, img, slide
 
 # menu
 showMobileMenuTerms = ["tags", "categories"]
