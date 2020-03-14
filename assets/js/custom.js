@@ -1,12 +1,13 @@
-function makeplot() {
+function makeBasicDataCharts() {
    Plotly.d3.csv("/csv/basic-data.csv", function(data){ processData(data) } );
 };
 
+// Positive and Deaths Main Chart
 function processData(allRows) {
    var data = [],
        dates = [],
        positive = [],
-       deaths = [],
+       deaths = []
        monitored = [];
 
    for (var i=0; i<allRows.length; i++) {
@@ -17,35 +18,37 @@ function processData(allRows) {
       monitored.push( row['PUM'] );
    }
 
-   var trace1 = {
+   var positiveData = {
       x: dates,
       y: positive,
       name: "Tested Positive",
       mode: 'lines+markers',
       marker: {
-         color: 'rgb(200,170,20)',
+         color: 'rgb(180,0,60)',
          size: 4
       },
       line: {
-         color: 'rgb(200,170,20)',
+         color: 'rgb(180,0,60)',
          width: 3
       },
-   }
-   var trace2 = {
+   };
+
+   var deathsData = {
       x: dates,
       y: deaths,
       name: "Deaths",
       mode: 'lines+markers',
       marker: {
-         color: 'rgb(179,0,59)',
+         color: 'rgb(0,0,0)',
          size: 4
       },
       line: {
-         color: 'rgb(179,0,59)',
+         color: 'rgb(0,0,0)',
          width: 3
       },
-   }
-   var trace3 = {
+   };
+
+   var pumData = {
       x: dates,
       y: monitored,
       name: "Persons Under Monitoring",
@@ -58,20 +61,23 @@ function processData(allRows) {
          color: 'rgb(20,80,160)',
          width: 3
       },
-   }
+   };
 
-   data = [ trace1, trace2, trace3 ];
+   positiveDeathsCombo = [ positiveData, deathsData ];
+   pumCombo = [ pumData ];
 
-   makePlotly(data);
+   positiveDeathsPlotlyConfig(positiveDeathsCombo);
+   pumPlotlyConfig(pumCombo);
 }
 
-function makePlotly(data){
-   var plotDiv = document.getElementById("plot");
+function positiveDeathsPlotlyConfig(data){
+   var plotDiv = document.getElementById("plot-1");
 
    var layout = {
       font: {
          size: 13
       },
+      showlegend: true,
       legend: {
          "orientation": "h",
          x: 0,
@@ -88,6 +94,34 @@ function makePlotly(data){
       },
    };
 
-   Plotly.newPlot('basic-data', data, layout, {responsive: true});
+   Plotly.newPlot('positive-deaths', data, layout, {responsive: true});
 };
-makeplot();
+
+function pumPlotlyConfig(data){
+   var plotDiv = document.getElementById("plot-2");
+
+   var layout = {
+      font: {
+         size: 13
+      },
+      showlegend: true,
+      legend: {
+         "orientation": "h",
+         x: 0,
+         xanchor: 'left',
+         y: 1
+      },
+      autosize: true,
+      margin: {
+         l: 50,
+         r: 50,
+         b: 50,
+         t: 30,
+         pad: 4
+      },
+   };
+
+   Plotly.newPlot('pum', data, layout, {responsive: true});
+};
+
+makeBasicDataCharts();
